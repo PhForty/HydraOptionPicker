@@ -1,0 +1,247 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Hydra Options Picker</title>
+</head>
+
+<body class="container">
+    <h1> Hydra Options Picker</h1>
+    <section class="section">
+        <h2>Module-Specific Options</h2>
+        <div class="select">
+            <select id="modulepicker">
+                <optgroup label="Available">
+                </optgroup>
+                <optgroup label="Not yet implemented">
+                    <option value="adam6500">adam6500</option>
+                    <option value="afp">afp</option>
+                    <option value="asterisk">asterisk</option>
+                    <option value="cisco">cisco</option>
+                    <option value="cisco-enable">cisco-enable</option>
+                    <option value="cvs">cvs</option>
+                    <option value="firebird">firebird</option>
+                    <option value="ftp">ftp</option>
+                    <option value="ftps">ftps</option>
+                    <option value="http[s]-head">http[s]-head</option>
+                    <option value="http[s]-get">http[s]-get</option>
+                    <option value="http[s]-post">http[s]-post</option>
+                    <option value="http[s]-get-form">http[s]-get-form</option>
+                    <option value="http[s]-post-form">http[s]-post-form</option>
+                    <option value="http-proxy">http-proxy</option>
+                    <option value="http-proxy-urlenum">http-proxy-urlenum</option>
+                    <option value="icq">icq</option>
+                    <option value="imap[s]">imap[s]</option>
+                    <option value="irc">irc</option>
+                    <option value="ldap2[s]">ldap2[s]</option>
+                    <option value="ldap3-crammd5[s]">ldap3-crammd5[s]</option>
+                    <option value="ldap3-digestmd5[s]">ldap3-digestmd5[s]</option>
+                    <option value="ldap3[s]">ldap3[s]</option>
+                    <option value="mssql">mssql</option>
+                    <option value="mysql(v4)">mysql(v4)</option>
+                    <option value="mysql5">mysql5</option>
+                    <option value="ncp">ncp</option>
+                    <option value="nntp">nntp</option>
+                    <option value="oracle">oracle</option>
+                    <option value="oracle-listener">oracle-listener</option>
+                    <option value="oracle-sid">oracle-sid</option>
+                    <option value="pcanywhere">pcanywhere</option>
+                    <option value="pcnfs">pcnfs</option>
+                    <option value="pop3[s]">pop3[s]</option>
+                    <option value="postgres">postgres</option>
+                    <option value="rdp">rdp</option>
+                    <option value="radmin2">radmin2</option>
+                    <option value="redis">redis</option>
+                    <option value="rexec">rexec</option>
+                    <option value="rlogin">rlogin</option>
+                    <option value="rpcap">rpcap</option>
+                    <option value="rsh">rsh</option>
+                    <option value="rtsp">rtsp</option>
+                    <option value="s7-300">s7-300</option>
+                    <option value="sapr3">sapr3</option>
+                    <option value="sip">sip</option>
+                    <option value="smb">smb</option>
+                    <option value="smtp[s]">smtp[s]</option>
+                    <option value="smtp-enum">smtp-enum</option>
+                    <option value="snmp">snmp</option>
+                    <option value="socks5">socks5</option>
+                    <option value="ssh">ssh</option>
+                    <option value="sshkey">sshkey</option>
+                    <option value="svn">svn</option>
+                    <option value="teamspeak">teamspeak</option>
+                    <option value="telnet[s]">telnet[s]</option>
+                    <option value="vmauthd">vmauthd</option>
+                    <option value="vnc">vnc</option>
+                    <option value="xmpp">xmpp</option>
+                </optgroup>
+            </select>
+        </div>
+        <div id="allModules">
+            <div class="is-hidden" id="adam6500">adam6500</div>
+<div class="is-hidden" id="afp">afp</div>
+<div class="is-hidden" id="asterisk">asterisk</div>
+<div class="is-hidden" id="cisco">cisco</div>
+<div class="is-hidden" id="cisco-enable">cisco-enable</div>
+<div class="is-hidden" id="cvs">cvs</div>
+<div class="is-hidden" id="firebird">firebird</div>
+<div class="is-hidden" id="ftp">ftp</div>
+<div class="is-hidden" id="ftps">ftps</div>
+<div class="is-hidden" id="http[s]-head">http[s]-head</div>
+<div class="is-hidden" id="http[s]-get">http[s]-get</div>
+<div class="is-hidden" id="http[s]-post">http[s]-post</div>
+<div class="is-hidden" id="http[s]-get-form">http[s]-get-form</div>
+<div class="is-hidden" id="http[s]-post-form">http[s]-post-form</div>
+<div class="is-hidden" id="http-proxy">http-proxy</div>
+<div class="is-hidden" id="http-proxy-urlenum">http-proxy-urlenum</div>
+<div class="is-hidden" id="icq">icq</div>
+<div class="is-hidden" id="imap[s]">imap[s]</div>
+<div class="is-hidden" id="irc">irc</div>
+<div class="is-hidden" id="ldap2[s]">ldap2[s]</div>
+<div class="is-hidden" id="ldap3-crammd5[s]">ldap3-crammd5[s]</div>
+<div class="is-hidden" id="ldap3-digestmd5[s]">ldap3-digestmd5[s]</div>
+<div class="is-hidden" id="ldap3[s]">ldap3[s]</div>
+<div class="is-hidden" id="mssql">mssql</div>
+<div class="is-hidden" id="mysql(v4)">mysql(v4)</div>
+<div class="is-hidden" id="mysql5">mysql5</div>
+<div class="is-hidden" id="ncp">ncp</div>
+<div class="is-hidden" id="nntp">nntp</div>
+<div class="is-hidden" id="oracle">oracle</div>
+<div class="is-hidden" id="oracle-listener">oracle-listener</div>
+<div class="is-hidden" id="oracle-sid">oracle-sid</div>
+<div class="is-hidden" id="pcanywhere">pcanywhere</div>
+<div class="is-hidden" id="pcnfs">pcnfs</div>
+<div class="is-hidden" id="pop3[s]">pop3[s]</div>
+<div class="is-hidden" id="postgres">postgres</div>
+<div class="is-hidden" id="rdp">rdp</div>
+<div class="is-hidden" id="radmin2">radmin2</div>
+<div class="is-hidden" id="redis">redis</div>
+<div class="is-hidden" id="rexec">rexec</div>
+<div class="is-hidden" id="rlogin">rlogin</div>
+<div class="is-hidden" id="rpcap">rpcap</div>
+<div class="is-hidden" id="rsh">rsh</div>
+<div class="is-hidden" id="rtsp">rtsp</div>
+<div class="is-hidden" id="s7-300">s7-300</div>
+<div class="is-hidden" id="sapr3">sapr3</div>
+<div class="is-hidden" id="sip">sip</div>
+<div class="is-hidden" id="smb">smb</div>
+<div class="is-hidden" id="smtp[s]">smtp[s]</div>
+<div class="is-hidden" id="smtp-enum">smtp-enum</div>
+<div class="is-hidden" id="snmp">snmp</div>
+<div class="is-hidden" id="socks5">socks5</div>
+<div class="is-hidden" id="ssh">ssh</div>
+<div class="is-hidden" id="sshkey">sshkey</div>
+<div class="is-hidden" id="svn">svn</div>
+<div class="is-hidden" id="teamspeak">teamspeak</div>
+<div class="is-hidden" id="telnet[s]">telnet[s]</div>
+<div class="is-hidden" id="vmauthd">vmauthd</div>
+<div class="is-hidden" id="vnc">vnc</div>
+<div class="is-hidden" id="xmpp">xmpp</div>
+        </div>
+    </section>
+    <section class="section">
+        <h2>General Options</h2>
+        <div class="columns">
+            <div class="column">
+                <div class="field">
+                    <label class="label">target</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="IPv4/6 adress or DNS name">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">-s PORT</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="non-default portnumber">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">-l LOGIN</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Single LOGIN name to try">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">-L LOGIN</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Path to file with several LOGIN names">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">-p PASS</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Single password to try">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">-P PASS</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Path to file with several passwords">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">-C FILE</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Path to file with colon separated 'login:pass'">
+                    </div>
+                  </div>
+                  <div class="field ">
+                    <label class="label is-left">-e (Additional checks)</label>
+                    <div class="control">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            n (null pw)
+                          </label>
+                          <label class="checkbox">
+                            <input type="checkbox">
+                            s (login as pass)
+                          </label>
+                          <label class="checkbox">
+                            <input type="checkbox">
+                            r (reverse login as pass)
+                          </label>
+                    </div>
+                  </div>
+            </div>
+            <div class="column">
+              -x
+              -y
+              -u
+              -f
+              -F
+              -M
+              -v
+            </div>
+            <div class="column">
+                -R
+                -I
+                -S
+                -O
+                -o
+                -b
+                -t
+                -w
+                -W
+                -c
+                -4/-6
+                -d
+                -h
+            </div>
+          </div>
+    </section>
+    <section class="section">
+        <h2>Autogenerated Command</h2>
+        
+        <button class="button copy-code-button">
+            Copy code to clipboard
+          </button>
+        <pre><code id="FullCommand">Ich bin Code</code></pre>
+    </section>
+
+
+
+    <script src="logic.js"></script>
+</body>
+</html>
