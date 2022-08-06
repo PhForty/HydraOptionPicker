@@ -9,9 +9,9 @@
 </head>
 
 <body class="container">
-    <h1> Hydra Options Picker</h1>
-    <section class="section">
-        <h2>Module-Specific Options</h2>
+    <h1 class="is-size-1 has-text-centered">Hydra Options Picker</h1>
+    <section class="section box">
+        <h2 class="is-size-2 has-text-centered">Module-Specific Options</h2>
         <div class="select">
             <select id="modulepicker">
                 <optgroup label="Available">
@@ -81,162 +81,295 @@
         </div>
         <div id="allModules">
             <div class="is-hidden" id="adam6500">adam6500</div>
-<div class="is-hidden" id="afp">afp</div>
-<div class="is-hidden" id="asterisk">asterisk</div>
-<div class="is-hidden" id="cisco">cisco</div>
-<div class="is-hidden" id="cisco-enable">cisco-enable</div>
-<div class="is-hidden" id="cvs">cvs</div>
-<div class="is-hidden" id="firebird">firebird</div>
-<div class="is-hidden" id="ftp">ftp</div>
-<div class="is-hidden" id="ftps">ftps</div>
-<div class="is-hidden" id="http[s]-head">http[s]-head</div>
-<div class="is-hidden" id="http[s]-get">http[s]-get</div>
-<div class="is-hidden" id="http[s]-post">http[s]-post</div>
-<div class="is-hidden" id="http[s]-get-form">http[s]-get-form</div>
-<div class="is-hidden" id="http[s]-post-form">http[s]-post-form</div>
-<div class="is-hidden" id="http-proxy">http-proxy</div>
-<div class="is-hidden" id="http-proxy-urlenum">http-proxy-urlenum</div>
-<div class="is-hidden" id="icq">icq</div>
-<div class="is-hidden" id="imap[s]">imap[s]</div>
-<div class="is-hidden" id="irc">irc</div>
-<div class="is-hidden" id="ldap2[s]">ldap2[s]</div>
-<div class="is-hidden" id="ldap3-crammd5[s]">ldap3-crammd5[s]</div>
-<div class="is-hidden" id="ldap3-digestmd5[s]">ldap3-digestmd5[s]</div>
-<div class="is-hidden" id="ldap3[s]">ldap3[s]</div>
-<div class="is-hidden" id="mssql">mssql</div>
-<div class="is-hidden" id="mysql(v4)">mysql(v4)</div>
-<div class="is-hidden" id="mysql5">mysql5</div>
-<div class="is-hidden" id="ncp">ncp</div>
-<div class="is-hidden" id="nntp">nntp</div>
-<div class="is-hidden" id="oracle">oracle</div>
-<div class="is-hidden" id="oracle-listener">oracle-listener</div>
-<div class="is-hidden" id="oracle-sid">oracle-sid</div>
-<div class="is-hidden" id="pcanywhere">pcanywhere</div>
-<div class="is-hidden" id="pcnfs">pcnfs</div>
-<div class="is-hidden" id="pop3[s]">pop3[s]</div>
-<div class="is-hidden" id="postgres">postgres</div>
-<div class="is-hidden" id="rdp">rdp</div>
-<div class="is-hidden" id="radmin2">radmin2</div>
-<div class="is-hidden" id="redis">redis</div>
-<div class="is-hidden" id="rexec">rexec</div>
-<div class="is-hidden" id="rlogin">rlogin</div>
-<div class="is-hidden" id="rpcap">rpcap</div>
-<div class="is-hidden" id="rsh">rsh</div>
-<div class="is-hidden" id="rtsp">rtsp</div>
-<div class="is-hidden" id="s7-300">s7-300</div>
-<div class="is-hidden" id="sapr3">sapr3</div>
-<div class="is-hidden" id="sip">sip</div>
-<div class="is-hidden" id="smb">smb</div>
-<div class="is-hidden" id="smtp[s]">smtp[s]</div>
-<div class="is-hidden" id="smtp-enum">smtp-enum</div>
-<div class="is-hidden" id="snmp">snmp</div>
-<div class="is-hidden" id="socks5">socks5</div>
-<div class="is-hidden" id="ssh">ssh</div>
-<div class="is-hidden" id="sshkey">sshkey</div>
-<div class="is-hidden" id="svn">svn</div>
-<div class="is-hidden" id="teamspeak">teamspeak</div>
-<div class="is-hidden" id="telnet[s]">telnet[s]</div>
-<div class="is-hidden" id="vmauthd">vmauthd</div>
-<div class="is-hidden" id="vnc">vnc</div>
-<div class="is-hidden" id="xmpp">xmpp</div>
+            <div class="is-hidden" id="afp">afp</div>
+            <div class="is-hidden" id="asterisk">asterisk</div>
+            <div class="is-hidden" id="cisco">cisco</div>
+            <div class="is-hidden" id="cisco-enable">cisco-enable</div>
+            <div class="is-hidden" id="cvs">cvs</div>
+            <div class="is-hidden" id="firebird">firebird</div>
+            <div class="is-hidden" id="ftp">ftp</div>
+            <div class="is-hidden" id="ftps">ftps</div>
+            <div class="is-hidden" id="http[s]-head">http[s]-head</div>
+            <div class="is-hidden" id="http[s]-get">http[s]-get</div>
+            <div class="is-hidden" id="http[s]-post">http[s]-post</div>
+            <div class="is-hidden" id="http[s]-get-form">http[s]-get-form</div>
+            <div class="is-hidden" id="http[s]-post-form">http[s]-post-form</div>
+            <div class="is-hidden" id="http-proxy">http-proxy</div>
+            <div class="is-hidden" id="http-proxy-urlenum">http-proxy-urlenum</div>
+            <div class="is-hidden" id="icq">icq</div>
+            <div class="is-hidden" id="imap[s]">imap[s]</div>
+            <div class="is-hidden" id="irc">irc</div>
+            <div class="is-hidden" id="ldap2[s]">ldap2[s]</div>
+            <div class="is-hidden" id="ldap3-crammd5[s]">ldap3-crammd5[s]</div>
+            <div class="is-hidden" id="ldap3-digestmd5[s]">ldap3-digestmd5[s]</div>
+            <div class="is-hidden" id="ldap3[s]">ldap3[s]</div>
+            <div class="is-hidden" id="mssql">mssql</div>
+            <div class="is-hidden" id="mysql(v4)">mysql(v4)</div>
+            <div class="is-hidden" id="mysql5">mysql5</div>
+            <div class="is-hidden" id="ncp">ncp</div>
+            <div class="is-hidden" id="nntp">nntp</div>
+            <div class="is-hidden" id="oracle">oracle</div>
+            <div class="is-hidden" id="oracle-listener">oracle-listener</div>
+            <div class="is-hidden" id="oracle-sid">oracle-sid</div>
+            <div class="is-hidden" id="pcanywhere">pcanywhere</div>
+            <div class="is-hidden" id="pcnfs">pcnfs</div>
+            <div class="is-hidden" id="pop3[s]">pop3[s]</div>
+            <div class="is-hidden" id="postgres">postgres</div>
+            <div class="is-hidden" id="rdp">rdp</div>
+            <div class="is-hidden" id="radmin2">radmin2</div>
+            <div class="is-hidden" id="redis">redis</div>
+            <div class="is-hidden" id="rexec">rexec</div>
+            <div class="is-hidden" id="rlogin">rlogin</div>
+            <div class="is-hidden" id="rpcap">rpcap</div>
+            <div class="is-hidden" id="rsh">rsh</div>
+            <div class="is-hidden" id="rtsp">rtsp</div>
+            <div class="is-hidden" id="s7-300">s7-300</div>
+            <div class="is-hidden" id="sapr3">sapr3</div>
+            <div class="is-hidden" id="sip">sip</div>
+            <div class="is-hidden" id="smb">smb</div>
+            <div class="is-hidden" id="smtp[s]">smtp[s]</div>
+            <div class="is-hidden" id="smtp-enum">smtp-enum</div>
+            <div class="is-hidden" id="snmp">snmp</div>
+            <div class="is-hidden" id="socks5">socks5</div>
+            <div class="is-hidden" id="ssh">ssh</div>
+            <div class="is-hidden" id="sshkey">sshkey</div>
+            <div class="is-hidden" id="svn">svn</div>
+            <div class="is-hidden" id="teamspeak">teamspeak</div>
+            <div class="is-hidden" id="telnet[s]">telnet[s]</div>
+            <div class="is-hidden" id="vmauthd">vmauthd</div>
+            <div class="is-hidden" id="vnc">vnc</div>
+            <div class="is-hidden" id="xmpp">xmpp</div>
         </div>
     </section>
-    <section class="section">
-        <h2>General Options</h2>
+    <section class="section box">
+        <h2 class="is-size-2 has-text-centered">General Options</h2>
         <div class="columns">
             <div class="column">
                 <div class="field">
                     <label class="label">target</label>
                     <div class="control">
-                      <input class="input" type="text" placeholder="IPv4/6 adress or DNS name">
+                        <input class="input" type="text" placeholder="IPv4/6 adress or DNS name">
                     </div>
-                  </div>
-                  <div class="field">
-                    <label class="label">-s PORT</label>
-                    <div class="control">
-                      <input class="input" type="text" placeholder="non-default portnumber">
-                    </div>
-                  </div>
-                  <div class="field">
+                </div>
+
+                <div class="field">
                     <label class="label">-l LOGIN</label>
                     <div class="control">
-                      <input class="input" type="text" placeholder="Single LOGIN name to try">
+                        <input class="input" type="text" placeholder="Single LOGIN name to try">
                     </div>
-                  </div>
-                  <div class="field">
-                    <label class="label">-L LOGIN</label>
+                </div>
+                <div class="field">
+                    <label class="label">-L File with several login names</label>
                     <div class="control">
-                      <input class="input" type="text" placeholder="Path to file with several LOGIN names">
+                        <input class="input" type="text" placeholder="/path/to/file">
                     </div>
-                  </div>
-                  <div class="field">
+                </div>
+                <div class="field">
                     <label class="label">-p PASS</label>
                     <div class="control">
-                      <input class="input" type="text" placeholder="Single password to try">
+                        <input class="input" type="text" placeholder="Single password to try">
                     </div>
-                  </div>
-                  <div class="field">
-                    <label class="label">-P PASS</label>
+                </div>
+                <div class="field">
+                    <label class="label">-P File with several passwords</label>
                     <div class="control">
-                      <input class="input" type="text" placeholder="Path to file with several passwords">
+                        <input class="input" type="text" placeholder="/path/to/file">
                     </div>
-                  </div>
-                  <div class="field">
-                    <label class="label">-C FILE</label>
+                </div>
+                <div class="field">
+                    <label class="label">-C File with colon separated 'login:pass'</label>
                     <div class="control">
-                      <input class="input" type="text" placeholder="Path to file with colon separated 'login:pass'">
+                        <input class="input" type="text" placeholder="/path/to/file">
                     </div>
-                  </div>
-                  <div class="field ">
+                </div>
+                <div class="field ">
                     <label class="label is-left">-e (Additional checks)</label>
                     <div class="control">
                         <label class="checkbox">
                             <input type="checkbox">
                             n (null pw)
-                          </label>
-                          <label class="checkbox">
+                        </label>
+                        <label class="checkbox">
                             <input type="checkbox">
                             s (login as pass)
-                          </label>
-                          <label class="checkbox">
+                        </label>
+                        <label class="checkbox">
                             <input type="checkbox">
                             r (reverse login as pass)
-                          </label>
+                        </label>
                     </div>
-                  </div>
+                </div>
             </div>
             <div class="column">
-              -x
-              -y
-              -u
-              -f
-              -F
-              -M
-              -v
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        -u first loop pw then login
+                    </label>
+                </div>
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        -f exit after first found pair per host
+                    </label>
+                </div>
+
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        -F exit after first found pair any host
+                    </label>
+                </div>
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        -v verbose
+                    </label>
+                </div>
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        -V print every login+pass attempt
+                    </label>
+                </div>
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        -R resume from existing hydra.restore
+                    </label>
+                </div>
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        -I ignore existing hydra.restore
+                    </label>
+                </div>
+                <div class="field">
+                    <label class="label">-o write to output file instead of stdout</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="/path/to/file">
+                    </div>
+                </div>
+                <div class="field select">
+                    <select>
+                        <option selected disabled>Text format to use</option>
+                        <option>text (default)</option>
+                        <option>json</option>
+                        <option>jsonv1</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label class="label">-s PORT</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="non-default portnumber">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">-x min:max:charset</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="generate passwords">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        -y disable symbols in -x
+                    </label>
+                </div>
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        -r nonrandom shuffling for -x
+                    </label>
+                </div>
             </div>
             <div class="column">
-                -R
-                -I
-                -S
-                -O
-                -o
-                -b
-                -t
-                -w
-                -W
-                -c
-                -4/-6
-                -d
-                -h
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        -S connect via SSL
+                    </label>
+                </div>
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        -O use old SSL v2 and v3
+                    </label>
+                </div>
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        -d debug mode
+                    </label>
+                </div>
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        -q dont print connection error messages
+                    </label>
+                </div>
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        -K dont redo failed attempts
+                    </label>
+                </div>
+                <div class="field select">
+                    <select>
+                        <option selected disabled>IP version to use</option>
+                        <option>IPv4 (default)</option>
+                        <option>IPv6</option>
+                    </select>
+                </div>
+
+
+                <div class="field">
+                    <label class="label">-M server list for parallel attack</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="/path/to/file">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">-t number of parallel connections per target</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="default is 16">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">-T number of parallel connections overall</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="default is 64">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">-w Timeout for responses</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="default is 32">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">-W wait time between connections</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">-c wait time between login attempts</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="default is 16">
+                    </div>
+                </div>
+
             </div>
-          </div>
+        </div>
     </section>
-    <section class="section">
-        <h2>Autogenerated Command</h2>
-        
+    <section class="section box">
+        <h2 class="is-size-2 has-text-centered">Autogenerated Command</h2>
+
         <button class="button copy-code-button">
             Copy code to clipboard
-          </button>
+        </button>
         <pre><code id="FullCommand">Ich bin Code</code></pre>
     </section>
 
@@ -244,4 +377,5 @@
 
     <script src="logic.js"></script>
 </body>
+
 </html>
