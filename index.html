@@ -148,43 +148,43 @@
                 <div class="field">
                     <label class="label">target</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="IPv4/6 adress or DNS name">
+                        <input class="input" id="general-target" type="text" placeholder="IPv4/6 adress or DNS name">
                     </div>
                 </div>
 
                 <div class="field">
                     <label class="label">-l LOGIN</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="Single LOGIN name to try">
+                        <input class="input" id="general-onelogin" type="text" placeholder="Single LOGIN name to try">
                     </div>
                 </div>
                 <div class="field">
                     <label class="label">-L File with several login names</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="/path/to/file">
+                        <input class="input" id="general-filelogin" type="text" placeholder="/path/to/file">
                     </div>
                 </div>
                 <div class="field">
                     <label class="label">-p PASS</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="Single password to try">
+                        <input class="input" id="general-onepass" type="text" placeholder="Single password to try">
                     </div>
                 </div>
                 <div class="field">
                     <label class="label">-P File with several passwords</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="/path/to/file">
+                        <input class="input" id="general-filepass" type="text" placeholder="/path/to/file">
                     </div>
                 </div>
                 <div class="field">
                     <label class="label">-C File with colon separated 'login:pass'</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="/path/to/file">
+                        <input class="input" id="general-filecombined" type="text" placeholder="/path/to/file">
                     </div>
                 </div>
                 <div class="field ">
                     <label class="label is-left">-e (Additional checks)</label>
-                    <div class="control">
+                    <div class="control"  id="general-additionalchecks">
                         <label class="checkbox">
                             <input type="checkbox">
                             n (null pw)
@@ -203,57 +203,57 @@
             <div class="column">
                 <div class="field">
                     <label class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox"  id="general-looppw">
                         -u first loop pw then login
                     </label>
                 </div>
                 <div class="field">
                     <label class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox"  id="general-exitperhost">
                         -f exit after first found pair per host
                     </label>
                 </div>
 
                 <div class="field">
                     <label class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox"  id="general-exitanyhost">
                         -F exit after first found pair any host
                     </label>
                 </div>
                 <div class="field">
                     <label class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox"  id="general-verbose">
                         -v verbose
                     </label>
                 </div>
                 <div class="field">
                     <label class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox"  id="general-veryverbose">
                         -V print every login+pass attempt
                     </label>
                 </div>
                 <div class="field">
                     <label class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox"  id="general-resume">
                         -R resume from existing hydra.restore
                     </label>
                 </div>
                 <div class="field">
                     <label class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox"  id="general-ignoreresume">
                         -I ignore existing hydra.restore
                     </label>
                 </div>
                 <div class="field">
                     <label class="label">-o write to output file instead of stdout</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="/path/to/file">
+                        <input class="input"  id="general-fileout" type="text" placeholder="/path/to/file">
                     </div>
                 </div>
                 <div class="field select">
-                    <select>
-                        <option selected disabled>Text format to use</option>
-                        <option>text (default)</option>
+                    <select  id="general-outformat">
+                        <option selected disabled>Text format to use (text is default)</option>
+                        <option>text</option>
                         <option>json</option>
                         <option>jsonv1</option>
                     </select>
@@ -261,24 +261,24 @@
                 <div class="field">
                     <label class="label">-s PORT</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="non-default portnumber">
+                        <input class="input"  id="general-port" type="text" placeholder="non-default portnumber">
                     </div>
                 </div>
                 <div class="field">
                     <label class="label">-x min:max:charset</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="generate passwords">
+                        <input class="input"  id="general-customcharset" type="text" placeholder="generate passwords">
                     </div>
                 </div>
                 <div class="field">
                     <label class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox"  id="general-disablexsymbols">
                         -y disable symbols in -x
                     </label>
                 </div>
                 <div class="field">
                     <label class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox"  id="general-disablexshuffling">
                         -r nonrandom shuffling for -x
                     </label>
                 </div>
@@ -286,38 +286,38 @@
             <div class="column">
                 <div class="field">
                     <label class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox"  id="general-ssl">
                         -S connect via SSL
                     </label>
                 </div>
                 <div class="field">
                     <label class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox"  id="general-oldssl">
                         -O use old SSL v2 and v3
                     </label>
                 </div>
                 <div class="field">
                     <label class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox"  id="general-debug">
                         -d debug mode
                     </label>
                 </div>
                 <div class="field">
                     <label class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox"  id="general-quiet">
                         -q dont print connection error messages
                     </label>
                 </div>
                 <div class="field">
                     <label class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox"  id="general-dontredo">
                         -K dont redo failed attempts
                     </label>
                 </div>
                 <div class="field select">
-                    <select>
-                        <option selected disabled>IP version to use</option>
-                        <option>IPv4 (default)</option>
+                    <select  id="general-ipversion">
+                        <option selected disabled>IP version to use (IPv4 is default)</option>
+                        <option>IPv4</option>
                         <option>IPv6</option>
                     </select>
                 </div>
@@ -326,38 +326,38 @@
                 <div class="field">
                     <label class="label">-M server list for parallel attack</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="/path/to/file">
+                        <input class="input" type="text"  id="general-fileserver" placeholder="/path/to/file">
                     </div>
                 </div>
 
                 <div class="field">
                     <label class="label">-t number of parallel connections per target</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="default is 16">
+                        <input class="input"  id="general-paralleltarget" type="text" placeholder="default is 16">
                     </div>
                 </div>
                 <div class="field">
                     <label class="label">-T number of parallel connections overall</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="default is 64">
+                        <input class="input" type="text"  id="general-paralleloverall" placeholder="default is 64">
                     </div>
                 </div>
                 <div class="field">
                     <label class="label">-w Timeout for responses</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="default is 32">
+                        <input class="input"  id="general-timeoutresponse" type="text" placeholder="default is 32">
                     </div>
                 </div>
                 <div class="field">
                     <label class="label">-W wait time between connections</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="">
+                        <input class="input"  id="general-timeoutconnection" type="text" placeholder="">
                     </div>
                 </div>
                 <div class="field">
                     <label class="label">-c wait time between login attempts</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="default is 16">
+                        <input class="input"  id="general-waittime" type="text" placeholder="default is 16">
                     </div>
                 </div>
 
@@ -365,7 +365,7 @@
         </div>
     </section>
     <section class="section box">
-        <h2 class="is-size-2 has-text-centered">Autogenerated Command</h2>
+        <h2 class="is-size-2 has-text-centered">Generated Command</h2>
 
         <button class="button copy-code-button">
             Copy code to clipboard
