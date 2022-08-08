@@ -12,9 +12,12 @@
     <h1 class="is-size-1 has-text-centered">Hydra Options Picker</h1>
     <section class="section box">
         <h2 class="is-size-2 has-text-centered">Module-Specific Options</h2>
+        <div class="columns is-centered mt-4">
         <div class="select">
             <select id="modulepicker">
+                <option selected disabled>Select a module</option>
                 <optgroup label="Available">
+                    <option value="ssh">ssh</option>
                 </optgroup>
                 <optgroup label="Not yet implemented">
                     <option value="adam6500">adam6500</option>
@@ -68,7 +71,7 @@
                     <option value="smtp-enum">smtp-enum</option>
                     <option value="snmp">snmp</option>
                     <option value="socks5">socks5</option>
-                    <option value="ssh">ssh</option>
+                    
                     <option value="sshkey">sshkey</option>
                     <option value="svn">svn</option>
                     <option value="teamspeak">teamspeak</option>
@@ -78,7 +81,7 @@
                     <option value="xmpp">xmpp</option>
                 </optgroup>
             </select>
-        </div>
+        </div></div>
         <div id="allModules">
             <div class="is-hidden" id="adam6500">adam6500</div>
             <div class="is-hidden" id="afp">afp</div>
@@ -131,7 +134,7 @@
             <div class="is-hidden" id="smtp-enum">smtp-enum</div>
             <div class="is-hidden" id="snmp">snmp</div>
             <div class="is-hidden" id="socks5">socks5</div>
-            <div class="is-hidden" id="ssh">ssh</div>
+            <div class="is-hidden" id="ssh"><p>ssh doesnt have module-specific options.</p><p>Select the general options below</p></div>
             <div class="is-hidden" id="sshkey">sshkey</div>
             <div class="is-hidden" id="svn">svn</div>
             <div class="is-hidden" id="teamspeak">teamspeak</div>
@@ -186,15 +189,15 @@
                     <label class="label is-left">-e (Additional checks)</label>
                     <div class="control"  id="general-additionalchecks">
                         <label class="checkbox">
-                            <input type="checkbox">
+                            <input type="checkbox" id="additionaln">
                             n (null pw)
                         </label>
                         <label class="checkbox">
-                            <input type="checkbox">
+                            <input type="checkbox"id="additionals">
                             s (login as pass)
                         </label>
                         <label class="checkbox">
-                            <input type="checkbox">
+                            <input type="checkbox" id="additionalr">
                             r (reverse login as pass)
                         </label>
                     </div>

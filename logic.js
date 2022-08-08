@@ -15,7 +15,7 @@ document.getElementById('modulepicker')
             chosenmodule.classList.remove('is-hidden');
 
 
-            this.value!=='' ? pickedmodule = ''+this.value+' ': pickedmodule=''; displayFullCommand();
+            this.value!=='' ? pickedmodule = ''+this.value+'://': pickedmodule=''; displayFullCommand();
         });
 
 //Functionality for copying code per button
@@ -41,13 +41,12 @@ document.querySelector('.copy-code-button')
         });
 
 
-document.getElementById('general-target').addEventListener('change', function () {this.value!=='' ? target = this.value+' ': target=''; displayFullCommand();})
+document.getElementById('general-target').addEventListener('change', function () {this.value!=='' ? target = this.value+'': target=''; displayFullCommand();})
 document.getElementById('general-onelogin').addEventListener('change', function () {this.value!=='' ? onelogin = '-l '+this.value+' ': onelogin=''; displayFullCommand();})
 document.getElementById('general-filelogin').addEventListener('change', function () {this.value!=='' ? filelogin = '-L '+this.value+' ': filelogin=''; displayFullCommand();})
 document.getElementById('general-onepass').addEventListener('change', function () {this.value!=='' ? onepass = '-p '+this.value+' ': onepass=''; displayFullCommand();})
 document.getElementById('general-filepass').addEventListener('change', function () {this.value!=='' ? filepass = '-P '+this.value+' ': filepass=''; displayFullCommand();})
 document.getElementById('general-filecombined').addEventListener('change', function () {this.value!=='' ? filecombined = '-C '+this.value+' ': filecombined=''; displayFullCommand();})
-document.getElementById('general-additionalchecks').addEventListener('change', function () {this.value!=='' ? additionalchecks = this.value+' ': additionalchecks=''; displayFullCommand();})
 document.getElementById('general-looppw').addEventListener('change', function () {this.checked? looppw = '-u ': looppw=''; displayFullCommand();})
 document.getElementById('general-exitperhost').addEventListener('change', function () {this.checked? exitperhost = '-f ': exitperhost=''; displayFullCommand();})
 document.getElementById('general-exitanyhost').addEventListener('change', function () {this.checked? exitanyhost = '-F ': exitanyhost=''; displayFullCommand();})
@@ -73,6 +72,25 @@ document.getElementById('general-paralleloverall').addEventListener('change', fu
 document.getElementById('general-timeoutresponse').addEventListener('change', function () {this.value!=='' ? timeoutresponse = '-w '+this.value+' ': timeoutresponse=''; displayFullCommand();})
 document.getElementById('general-timeoutconnection').addEventListener('change', function () {this.value!=='' ? timeoutconnection = '-W '+this.value+' ': timeoutconnection=''; displayFullCommand();})
 document.getElementById('general-waittime').addEventListener('change', function () {this.value!=='' ? waittime = '-c '+this.value+' ': waittime=''; displayFullCommand();})
+document.getElementById('general-additionalchecks').addEventListener('change', function () {
+    var input = this.getElementsByTagName('input');
+    var inputList = Array.prototype.slice.call(input);
+    additionalchecks = '-e '
+    inputList.forEach(element => {
+        if (element.id === "additionaln" && document.getElementById(element.id).checked){
+            additionalchecks += 'n'
+        }
+        if (element.id === "additionals" && document.getElementById(element.id).checked){
+            additionalchecks += 's'
+        }
+        if (element.id === "additionalr" && document.getElementById(element.id).checked){
+            additionalchecks += 'r'
+        }
+    });
+    console.log("additionalchecks: "+additionalchecks);
+    additionalchecks.length == 3 ? additionalchecks = '': additionalchecks += ' ';
+    console.log("additionalchecks: "+additionalchecks);
+    displayFullCommand();})
 
 function displayFullCommand(){
     let output = "";
@@ -108,8 +126,8 @@ function displayFullCommand(){
     output += timeoutresponse;
     output += timeoutconnection;
     output += waittime;
-    output += target;
     output += pickedmodule;
+    output += target;
 
 
     document.getElementById('FullCommand').innerText = output;
