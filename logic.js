@@ -40,7 +40,6 @@ document.querySelector('.copy-code-button')
             }, 2000);
         });
 
-
 document.getElementById('general-target').addEventListener('change', function () {this.value!=='' ? target = this.value+'': target=''; displayFullCommand();})
 document.getElementById('general-onelogin').addEventListener('change', function () {this.value!=='' ? onelogin = '-l '+this.value+' ': onelogin=''; displayFullCommand();})
 document.getElementById('general-filelogin').addEventListener('change', function () {this.value!=='' ? filelogin = '-L '+this.value+' ': filelogin=''; displayFullCommand();})
