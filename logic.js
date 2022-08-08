@@ -12,6 +12,14 @@ document.getElementById('modulepicker')
                 childDivs[i].classList.add('is-hidden');
                 }
             var chosenmodule = document.getElementById(this.value);
+            var chosenchildren = chosenmodule.children
+            function removeHidden(element){
+                for (var i=0; i<element.length; i++){
+                    element[i].classList.remove('is-hidden');
+                    removeHidden(element[i].children);
+                }
+            }
+            removeHidden(chosenchildren);
             chosenmodule.classList.remove('is-hidden');
 
 

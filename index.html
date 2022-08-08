@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="nuclear.css">
-    <lllink rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/bulma-prefers-dark" />
     <title>Hydra Options Picker</title>
 </head>
@@ -20,6 +19,7 @@
                 <option selected disabled>Select a module</option>
                 <optgroup label="Available">
                     <option value="ssh">ssh</option>
+                    <option value="http[s]-post-form">http[s]-post-form</option>
                 </optgroup>
                 <optgroup label="Not yet implemented">
                     <option value="adam6500">adam6500</option>
@@ -35,7 +35,6 @@
                     <option value="http[s]-get">http[s]-get</option>
                     <option value="http[s]-post">http[s]-post</option>
                     <option value="http[s]-get-form">http[s]-get-form</option>
-                    <option value="http[s]-post-form">http[s]-post-form</option>
                     <option value="http-proxy">http-proxy</option>
                     <option value="http-proxy-urlenum">http-proxy-urlenum</option>
                     <option value="icq">icq</option>
@@ -84,7 +83,7 @@
                 </optgroup>
             </select>
         </div></div>
-        <div id="allModules">
+        <div id="allModules" class="columns is-centered">
             <div class="is-hidden" id="adam6500">adam6500</div>
             <div class="is-hidden" id="afp">afp</div>
             <div class="is-hidden" id="asterisk">asterisk</div>
@@ -98,7 +97,49 @@
             <div class="is-hidden" id="http[s]-get">http[s]-get</div>
             <div class="is-hidden" id="http[s]-post">http[s]-post</div>
             <div class="is-hidden" id="http[s]-get-form">http[s]-get-form</div>
-            <div class="is-hidden" id="http[s]-post-form">http[s]-post-form</div>
+            <div class="is-hidden" id="http[s]-post-form">
+                <div class="field">
+                    <label class="label">path to page on the server</label>
+                    <div class="control">
+                        <input class="input" id="http-post-form-path" type="text" placeholder="URL">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">The post variables with url-encoded (resp. base64-encoded) usernames and passwords being replaced in the "^USER^" (resp. "^USER64^") and "^PASS^" (resp. "^PASS64^") placeholders</label>
+                    <div class="control">
+                        <input class="input" id="http-post-form-parameters" type="text" placeholder="">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">String to check for that specifies <b>invalid</b> login</label>
+                    <div class="control">
+                        <input class="input" id="http-post-form-parameters" type="text" placeholder="">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox"  id="http-post-form-switch">
+                        Above string should instead specify successful condition
+                    </label>
+                </div>
+                <div class="field">
+                    <label class="label">Optional: Different page to get cookies from</label>
+                    <div class="control">
+                        <input class="input" id="http-post-form-differentpage" type="text" placeholder="URL">
+                        <input type="checkbox"  id="http-post-form-skipprequest">
+                        Skip prerequests
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Optional: Header to add to request</label>
+                    <div class="control">
+                        <input class="input" id="http-post-form-additionalheader" type="text" placeholder="URL">
+                        <input type="checkbox"  id="http-post-form-dontreplacehader">
+                        Add Header without replacing those with same name
+                    </div>
+                </div>
+            </div>
             <div class="is-hidden" id="http-proxy">http-proxy</div>
             <div class="is-hidden" id="http-proxy-urlenum">http-proxy-urlenum</div>
             <div class="is-hidden" id="icq">icq</div>
