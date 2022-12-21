@@ -36,6 +36,9 @@
                     <option value="rdp">rdp</option>
                     <option value="mongodb">mongodb</option>
                     <option value="mysql">mysql</option>
+                    <option value="redis">redis</option>
+                    <option value="postgres">postgres</option>
+                    <option value="radmin2">radmin2</option>
                     
                 </optgroup>
                 <optgroup label="Not yet implemented">
@@ -60,9 +63,6 @@
                     <option value="pcanywhere">pcanywhere</option>
                     <option value="pcnfs">pcnfs</option>
                     <option value="pop3[s]">pop3[s]</option>
-                    <option value="postgres">postgres</option>
-                    <option value="radmin2">radmin2</option>
-                    <option value="redis">redis</option>
                     <option value="rexec">rexec</option>
                     <option value="rlogin">rlogin</option>
                     <option value="rpcap">rpcap</option>
@@ -167,7 +167,14 @@
             <div class="is-hidden" id="pcanywhere">pcanywhere</div>
             <div class="is-hidden" id="pcnfs">pcnfs</div>
             <div class="is-hidden" id="pop3[s]">pop3[s]</div>
-            <div class="is-hidden" id="postgres">postgres</div>
+            <div class="is-hidden" id="postgres">
+                <div class="field">
+                    <label class="label">Optional: Database to attack, default is "template1"</label>
+                    <div class="control">
+                        <input class="input" id="postgres-database" type="text" placeholder="template1">
+                    </div>
+                </div>
+            </div>
             <div class="is-hidden" id="rdp">
                 <div class="field">
                     <label class="label">Optional: Windows domain name</label>
@@ -176,8 +183,10 @@
                     </div>
                 </div>
             </div>
-            <div class="is-hidden" id="radmin2">radmin2</div>
-            <div class="is-hidden" id="redis">redis</div>
+            <div class="is-hidden" id="radmin2"><p>radmin2 doesnt have module-specific options.</p><p>Select the general options below</p></div>
+            <div class="is-hidden" id="redis">
+                <p>redis doesnt have module-specific options.</p><p>Select the general options below</p>
+            </div>
             <div class="is-hidden" id="rexec">rexec</div>
             <div class="is-hidden" id="rlogin">rlogin</div>
             <div class="is-hidden" id="rpcap">rpcap</div>

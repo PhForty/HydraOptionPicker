@@ -135,13 +135,19 @@ function displayMysqlCommand(){
 //mongodb eventlistener
 document.getElementById('mongodb-database').addEventListener('change', function () {mongodbdatabase = this.value; displayMongodbCommand();})
 function displayMongodbCommand(){
-    mysql = " -m '" + mongodbdatabase+ "'";
+    mongodb = " -m '" + mongodbdatabase+ "'";
     displayFullCommand();
 }
 
+//postgres eventlistener
+document.getElementById('postgres-database').addEventListener('change', function () {postgresdatabase = this.value; displayPostgresCommand();})
+function displayPostgresCommand(){
+    postgres = " -m '" + postgresdatabase+ "'";
+    displayFullCommand();
+}
 
 function emptyOptionalValues(){
-    httppostform = rdp = "";
+    httppostform = rdp = mysql= mongodb = postgres="";
 }
 
 function displayFullCommand(){
@@ -184,6 +190,8 @@ function displayFullCommand(){
     output += rdp;
     output += httppostform;
     output += mysql;
+    output += mongodb;
+    output += postgres;
 
 
     document.getElementById('FullCommand').innerText = output;
