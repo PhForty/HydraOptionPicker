@@ -132,6 +132,13 @@ function displayMysqlCommand(){
     displayFullCommand();
 }
 
+//mongodb eventlistener
+document.getElementById('mongodb-database').addEventListener('change', function () {mongodbdatabase = this.value; displayMongodbCommand();})
+function displayMongodbCommand(){
+    mysql = " -m '" + mongodbdatabase+ "'";
+    displayFullCommand();
+}
+
 
 function emptyOptionalValues(){
     httppostform = rdp = "";

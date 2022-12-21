@@ -15,6 +15,7 @@ Click yourself through the options and copy the command at the end.
 - [ ] Make better design/CSS
 - [ ] Separate modules for better networkload (if its a problem)
 - [ ] Make wording consistent
+- [ ] Change to verbose commands?
 
 # Quelle
 Github Ribbon von https://github.com/tholman/github-corners; [MIT License](https://github.com/tholman/github-corners/blob/master/license.md)

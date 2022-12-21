@@ -34,6 +34,8 @@
                     <option value="cobaltstrike">cobaltstrike</option>
                     <option value="memcached">memcached</option>
                     <option value="rdp">rdp</option>
+                    <option value="mongodb">mongodb</option>
+                    <option value="mysql">mysql</option>
                     
                 </optgroup>
                 <optgroup label="Not yet implemented">
@@ -52,8 +54,6 @@
                     <option value="ldap3-crammd5[s]">ldap3-crammd5[s]</option>
                     <option value="ldap3-digestmd5[s]">ldap3-digestmd5[s]</option>
                     <option value="ldap3[s]">ldap3[s]</option>
-                    <option value="mongodb">mongodb</option>
-                    <option value="mysql">mysql</option>
                     <option value="nntp">nntp</option>
                     <option value="oracle-listener">oracle-listener</option>
                     <option value="oracle-sid">oracle-sid</option>
@@ -142,6 +142,14 @@
             <div class="is-hidden" id="ldap3-digestmd5[s]">ldap3-digestmd5[s]</div>
             <div class="is-hidden" id="ldap3[s]">ldap3[s]</div>
             <div class="is-hidden" id="memcached"><p>memcached doesnt have module-specific options.</p><p>Select the general options below</p></div>
+            <div class="is-hidden" id="mongodb">
+                <div class="field">
+                    <label class="label">Optional: Database to attack, default is "mongodb"</label>
+                    <div class="control">
+                        <input class="input" id="mongodb-database" type="text" placeholder="mongodb">
+                    </div>
+                </div>
+            </div>
             <div class="is-hidden" id="mssql"><p>mssql doesnt have module-specific options.</p><p>Select the general options below</p></div>
             <div class="is-hidden" id="mysql">
                 <div class="field">
