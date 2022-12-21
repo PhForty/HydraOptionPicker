@@ -1,5 +1,4 @@
-var target = onelogin = filelogin = onepass = filepass = filecombined = additionalchecks = looppw = exitperhost = exitanyhost = verbose = veryverbose = resume = ignoreresume = fileout = outformat = port = customcharset = disablexsymbols = disablexshuffling = ssl = oldssl = debug = quiet = dontredo = ipversion = fileserver = paralleltarget = 
-paralleloverall = timeoutresponse = timeoutconnection = waittime = pickedmodule = httppostform = httppostformpath= httppostformparameters=httppostformswitch=httppostformcondition='';
+var target = onelogin = filelogin = onepass = filepass = filecombined = additionalchecks = looppw = exitperhost = exitanyhost = verbose = veryverbose = resume = ignoreresume = fileout = outformat = port = customcharset = disablexsymbols = disablexshuffling = ssl = oldssl = debug = quiet = dontredo = ipversion = fileserver = paralleltarget = paralleloverall = timeoutresponse = timeoutconnection = waittime = pickedmodule = httppostform = httppostformpath= httppostformparameters=httppostformswitch=httppostformcondition=rdpdomain='';
 
 //Functionality for only showing the selected module-specific options
 document.getElementById('modulepicker')
@@ -118,8 +117,12 @@ function displayHttpPostFormCommand(){
     displayFullCommand();
 }
 
-
-
+//RDP eventlistener
+document.getElementById('rdp-domain').addEventListener('change', function () {rdpdomain = this.value; displayRdpCommand();})
+function displayRdpCommand(){
+    rdp = '/' + rdpdomain;
+    displayFullCommand();
+}
 
 
 
@@ -160,6 +163,7 @@ function displayFullCommand(){
     output += pickedmodule;
     output += target;
 
+    output += rdp;
     output += httppostform;
 
 
