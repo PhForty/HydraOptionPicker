@@ -95,9 +95,7 @@ document.getElementById('general-additionalchecks').addEventListener('change', f
             additionalchecks += 'r'
         }
     });
-    console.log("additionalchecks: "+additionalchecks);
     additionalchecks.length == 3 ? additionalchecks = '': additionalchecks += ' ';
-    console.log("additionalchecks: "+additionalchecks);
     displayFullCommand();})
 
 //HTTP[s]-post-form eventlistener
@@ -106,7 +104,6 @@ document.getElementById('http-post-form-parameters').addEventListener('change', 
 document.getElementById('http-post-form-condition').addEventListener('change', function () {httppostformcondition = this.value; displayHttpPostFormCommand();})
 document.getElementById('http-post-form-switch').addEventListener('change', function () {this.checked? httppostformswitch = 'S=': httppostformswitch=''; displayHttpPostFormCommand();})
 document.getElementById('http-post-form-encrypted').addEventListener('change', function () {this.checked? pickedmodule = 'https-post-form://': pickedmodule='http-post-form://'; displayHttpPostFormCommand();})
-
 function displayHttpPostFormCommand(){
     httppostform = ' ';
     httppostform += '"';
@@ -120,6 +117,11 @@ function displayHttpPostFormCommand(){
     httppostform += '"';
     displayFullCommand();
 }
+
+
+
+
+
 
 function displayFullCommand(){
     let output = "";
