@@ -143,7 +143,14 @@
             <div class="is-hidden" id="ldap3[s]">ldap3[s]</div>
             <div class="is-hidden" id="memcached"><p>memcached doesnt have module-specific options.</p><p>Select the general options below</p></div>
             <div class="is-hidden" id="mssql"><p>mssql doesnt have module-specific options.</p><p>Select the general options below</p></div>
-            <div class="is-hidden" id="mysql">mysql</div>
+            <div class="is-hidden" id="mysql">
+                <div class="field">
+                    <label class="label">Optional: Database to attack, default is "mysql"</label>
+                    <div class="control">
+                        <input class="input" id="mysql-database" type="text" placeholder="mysql">
+                    </div>
+                </div>
+            </div>
             <div class="is-hidden" id="ncp">ncp</div>
             <div class="is-hidden" id="nntp">nntp</div>
             <div class="is-hidden" id="oracle">oracle</div>

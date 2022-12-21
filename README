@@ -1,5 +1,5 @@
 # What is this about?
-Hydra is a powerful tool, but remembering the exact syntax is tedious.
+[Hydra](https://github.com/vanhauser-thc/thc-hydra) is a powerful tool, but remembering the exact syntax is tedious.
 
 This plain static webpage helps building hydra commands with a GUI.
 
@@ -14,6 +14,7 @@ Click yourself through the options and copy the command at the end.
 - [x] Add functionality for wiping all optional arguments (button?)
 - [ ] Make better design/CSS
 - [ ] Separate modules for better networkload (if its a problem)
+- [ ] Make wording consistent
 
 # Quelle
 Github Ribbon von https://github.com/tholman/github-corners; [MIT License](https://github.com/tholman/github-corners/blob/master/license.md)
