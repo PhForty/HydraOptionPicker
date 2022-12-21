@@ -17,6 +17,7 @@ Click yourself through the options and copy the command at the end.
 - [ ] Make wording consistent
 - [ ] Change to verbose commands
 - [ ] Seek ways to refactor, to make stuff more compact and less redundant
+- [ ] Make searchable drop-down menu for usability
 
 # Quelle
 Github Ribbon von https://github.com/tholman/github-corners; [MIT License](https://github.com/tholman/github-corners/blob/master/license.md)
