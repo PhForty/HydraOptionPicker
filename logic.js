@@ -1,5 +1,5 @@
 var target = onelogin = filelogin = onepass = filepass = filecombined = additionalchecks = looppw = exitperhost = exitanyhost = verbose = veryverbose = resume = ignoreresume = fileout = outformat = port = customcharset = disablexsymbols = disablexshuffling = ssl = oldssl = debug = quiet = dontredo = ipversion = fileserver = paralleltarget = 
-paralleloverall = timeoutresponse = timeoutconnection = waittime = pickedmodule = '';
+paralleloverall = timeoutresponse = timeoutconnection = waittime = pickedmodule = httppostform = httppostformpath= httppostformparameters=httppostformswitch=httppostformcondition='';
 
 //Functionality for only showing the selected module-specific options
 document.getElementById('modulepicker')
@@ -48,6 +48,7 @@ document.querySelector('.copy-code-button')
             }, 2000);
         });
 
+//General Options eventlistener
 document.getElementById('general-target').addEventListener('change', function () {this.value!=='' ? target = this.value+'': target=''; displayFullCommand();})
 document.getElementById('general-onelogin').addEventListener('change', function () {this.value!=='' ? onelogin = '-l '+this.value+' ': onelogin=''; displayFullCommand();})
 document.getElementById('general-filelogin').addEventListener('change', function () {this.value!=='' ? filelogin = '-L '+this.value+' ': filelogin=''; displayFullCommand();})
@@ -99,6 +100,27 @@ document.getElementById('general-additionalchecks').addEventListener('change', f
     console.log("additionalchecks: "+additionalchecks);
     displayFullCommand();})
 
+//HTTP[s]-post-form eventlistener
+document.getElementById('http-post-form-path').addEventListener('change', function () {httppostformpath = this.value; displayHttpPostFormCommand();})
+document.getElementById('http-post-form-parameters').addEventListener('change', function () {httppostformparameters = this.value; displayHttpPostFormCommand();})
+document.getElementById('http-post-form-condition').addEventListener('change', function () {httppostformcondition = this.value; displayHttpPostFormCommand();})
+document.getElementById('http-post-form-switch').addEventListener('change', function () {this.checked? httppostformswitch = 'S=': httppostformswitch=''; displayHttpPostFormCommand();})
+document.getElementById('http-post-form-encrypted').addEventListener('change', function () {this.checked? pickedmodule = 'https-post-form://': pickedmodule='http-post-form://'; displayHttpPostFormCommand();})
+
+function displayHttpPostFormCommand(){
+    httppostform = ' ';
+    httppostform += '"';
+    httppostform += httppostformpath;
+    httppostform += ':';
+    httppostform += httppostformparameters;
+    httppostform += ':';
+    httppostform += httppostformswitch;
+    httppostform += httppostformcondition;
+
+    httppostform += '"';
+    displayFullCommand();
+}
+
 function displayFullCommand(){
     let output = "";
     output += "hydra ";
@@ -135,6 +157,8 @@ function displayFullCommand(){
     output += waittime;
     output += pickedmodule;
     output += target;
+
+    output += httppostform;
 
 
     document.getElementById('FullCommand').innerText = output;
