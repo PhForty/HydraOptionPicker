@@ -104,6 +104,7 @@ document.getElementById('http-post-form-condition').addEventListener('change', f
 document.getElementById('http-post-form-switch').addEventListener('change', function () {this.checked? httppostformswitch = 'S=': httppostformswitch=''; displayHttpPostFormCommand();})
 document.getElementById('http-post-form-encrypted').addEventListener('change', function () {this.checked? pickedmodule = 'https-post-form://': pickedmodule='http-post-form://'; displayHttpPostFormCommand();})
 function displayHttpPostFormCommand(){
+    emptyOptionalValues();
     httppostform = ' ';
     httppostform += '"';
     httppostform += httppostformpath;
@@ -120,11 +121,14 @@ function displayHttpPostFormCommand(){
 //RDP eventlistener
 document.getElementById('rdp-domain').addEventListener('change', function () {rdpdomain = this.value; displayRdpCommand();})
 function displayRdpCommand(){
+    emptyOptionalValues();
     rdp = '/' + rdpdomain;
     displayFullCommand();
 }
 
-
+function emptyOptionalValues(){
+    httppostform = rdp = "";
+}
 
 function displayFullCommand(){
     let output = "";

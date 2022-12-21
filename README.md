@@ -11,7 +11,7 @@ Click yourself through the options and copy the command at the end.
 # Todos
 - [ ] Implement all modules
 - [ ] Add Escaping and logic checks
-- [ ] Add functionality for wiping all optional arguments (button?)
+- [x] Add functionality for wiping all optional arguments (button?)
 - [ ] Make better design/CSS
 - [ ] Separate modules for better networkload (if its a problem)
 
